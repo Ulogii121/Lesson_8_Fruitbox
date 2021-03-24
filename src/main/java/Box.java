@@ -1,13 +1,17 @@
 public class Box<T> {
-    protected T element;
+    private T element;
 
     public T get() {
         return element;
     }
 
-    public void put(T element) {
-        this.element = element;
+    public void put(final T myElement) {
+        this.element = myElement;
     }
 
+    @Override
+    public String toString() {
+        return element.toString();
+    }
 }
 

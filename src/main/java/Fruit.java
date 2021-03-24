@@ -1,17 +1,16 @@
 public class Fruit {
-    protected boolean fresh = true;
+    private boolean fresh = true;
 
-    public boolean getFresh() {
-        return fresh;
-    }
-
-    public void setFresh(boolean fresh) {
-        this.fresh = fresh;
-    }
-
-    Fruit(boolean fresh) {
+    public void setFresh(final boolean fresh) {
         this.fresh = fresh;
     }
 
 
+    public Fruit getIfFresh() {
+        if (this != null && this.fresh) { //IDEa сказала, что this != null всегда true, поэтому убрал этот блок
+            return this;
+        } else {
+            return null;
+        }
+    }
 }

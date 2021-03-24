@@ -1,20 +1,15 @@
 public class Apple extends Fruit {
 
-    protected String name;
 
-    public String name() {
-        return name;
-    }
+    private String name;
 
-    public void setName(String name) {
+    public Apple(final String name, final boolean fresh) {
+        setFresh(fresh);
         this.name = name;
     }
 
-    public Apple(String name, boolean fresh) {
-        super(fresh);
-        this.name = name;
+    @Override
+    public String toString() {
+        return "Apple {" + name + "}" ;
     }
-
-
-
 }
